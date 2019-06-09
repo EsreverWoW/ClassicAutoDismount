@@ -1,7 +1,7 @@
 ﻿----------------------------------------------------------------------------------------
 --	ClassicAutoDismount (by EsreverWoW)
 ----------------------------------------------------------------------------------------
-local frame = CreateFrame("Frame")
+local f = CreateFrame("Frame")
 
 local errorMessages = {
 	[ERR_ATTACK_MOUNTED]			= true,
@@ -11,12 +11,12 @@ local errorMessages = {
 	[SPELL_FAILED_NOT_MOUNTED]		= true,
 }
 
-function CheckDismount(self, event, ...)
+local function CheckDismount(self, event, ...)
 	if not IsMounted() or not errorMessages[select(2, ...)] then return end
 
 	Dismount()
 	UIErrorsFrame:Clear()
 end
 
-frame:RegisterEvent("UI_ERROR_MESSAGE")
-frame:SetScript("OnEvent", CheckDismount)
+f:RegisterEvent("UI_ERROR_MESSAGE")
+f:SetScript("OnEvent", CheckDismount)
