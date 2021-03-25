@@ -7,7 +7,7 @@ local errorMessages = {
 	[ERR_ATTACK_MOUNTED]			= true,
 	[ERR_MOUNT_ALREADYMOUNTED]		= true,
 	[ERR_NOT_WHILE_MOUNTED]			= true,
-	[ERR_TAXIPLAYERALREADYMOUNTED]	= true,
+	[ERR_TAXIPLAYERALREADYMOUNTED]		= true,
 	[SPELL_FAILED_NOT_MOUNTED]		= true,
 }
 
